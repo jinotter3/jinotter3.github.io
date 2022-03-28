@@ -1,0 +1,12 @@
+I";<h3 id="파이썬-클래스">파이썬 클래스</h3>
+
+<p>파이썬 클래스를 공부하면서 알게된 내용들을 정리해보려고 한다.</p>
+
+<h3 id="constructor-vs-destructor">Constructor vs Destructor</h3>
+<p>파이썬의 <code class="language-plaintext highlighter-rouge">__init__()</code> 함수는 class의 object가 instantiated 되자마자 실행된다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="k">print</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
+</code></pre></div></div>
+:ET

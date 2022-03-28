@@ -1,0 +1,52 @@
+I"�<h1 id="파이썬-클래스">파이썬 클래스</h1>
+
+<p>파이썬 클래스를 공부하면서 알게된 내용들을 정리해보려고 한다.</p>
+
+<h2 id="constructor-vs-destructor">Constructor vs Destructor</h2>
+<h3 id="constructor-init">Constructor <strong>init</strong></h3>
+<p>파이썬의 <code class="language-plaintext highlighter-rouge">__init__()</code> 함수는 class의 object가 instantiated 되자마자 실행된다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="k">print</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
+
+<span class="n">otter</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s">'Jin Otter'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>실행결과</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Jin Otter
+</code></pre></div></div>
+
+<h3 id="destructor-del">Destructor <strong>del</strong></h3>
+<p>파이썬의 <code class="language-plaintext highlighter-rouge">__del__()</code> 함수는 <strong>Python Garbage Collector</strong>와 작동한다.  <br />
+Python에서 생성되는 모든 Object는 Object가 참조되는 수인 reference count를 가지고 있다. Python의 <code class="language-plaintext highlighter-rouge">sys.getrefcount(object)</code>는 object의 참조 갯수(reference count)를 알려주는 함수로 작동한다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">sys</span> 
+<span class="n">sys</span><span class="p">.</span><span class="n">getrefcount</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div></div>
+<ul>
+  <li>실행결과</li>
+</ul>
+
+<pre><code class="language-idle">694
+# 시스템에 따라서 3이 사용되는 숫자도 변한다. 
+# 필자는 머신러닝 라이브러리가 설치된 환경에서 실행하여 숫자가 크게 나온 듯 하다. 
+</code></pre>
+<p><br />
+이후, a = 3, b = 3과 같이 3을 가리키는 변수를 늘리면 참조의 개수가 증가한다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">3</span> 
+<span class="n">sys</span><span class="p">.</span><span class="n">getrefcount</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div></div>
+<ul>
+  <li>실행결과</li>
+</ul>
+
+<pre><code class="language-idle">695
+</code></pre>
+
+<p><br />
+이후 <code class="language-plaintext highlighter-rouge">del a</code>등을 통해 3을 가리키는 변수가 줄어들면 참조 개수가 감소하는 모습을 볼 수 있다. 이 때 참조 개수가 0이 되는 순간, 3이라는 객체는 자동으로 Garbage collector에 의해 소멸한다.</p>
+:ET
