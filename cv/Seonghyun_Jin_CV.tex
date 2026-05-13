@@ -1,0 +1,133 @@
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.72in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\definecolor{cvblue}{HTML}{1D4ED8}
+\definecolor{cvtext}{HTML}{111827}
+\definecolor{cvmuted}{HTML}{4B5563}
+\definecolor{cvline}{HTML}{D8E5F2}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=cvblue,
+  linkcolor=cvblue
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{leftmargin=1.1em, topsep=2pt, itemsep=1pt, parsep=0pt}
+
+\newcommand{\name}[1]{%
+  {\LARGE\bfseries\color{cvtext} #1}\par\vspace{4pt}
+}
+
+\newcommand{\contact}[1]{%
+  {\small\color{cvmuted} #1}\par\vspace{10pt}
+}
+
+\newcommand{\sectiontitle}[1]{%
+  \vspace{11pt}
+  {\large\bfseries\color{cvblue} #1}\par
+  \vspace{2pt}
+  {\color{cvline}\hrule height 0.8pt}
+  \vspace{6pt}
+}
+
+\newcommand{\entry}[4]{%
+  \begin{tabularx}{\linewidth}{@{}X r@{}}
+    \textbf{#1} & {\small\color{cvmuted} #2} \\
+    {\color{cvmuted} #3} & {\small\color{cvmuted} #4} \\
+  \end{tabularx}
+}
+
+\newcommand{\paper}[4]{%
+  \textbf{#1}\par
+  #2\par
+  {\small\color{cvmuted} #3}\par
+  {\small #4}\par
+  \vspace{6pt}
+}
+
+\begin{document}
+
+\name{Seonghyun Jin}
+\contact{
+  KAIST AI, BISPL Lab \quad
+  \href{mailto:jinotter3@kaist.ac.kr}{jinotter3@kaist.ac.kr} \quad
+  \href{mailto:jinotter@gmail.com}{jinotter@gmail.com} \\
+  \href{https://jinotter3.github.io/}{jinotter3.github.io} \quad
+  \href{https://github.com/jinotter3}{github.com/jinotter3} \quad
+  \href{https://scholar.google.com/citations?user=L13GpZIAAAAJ\&hl=ko}{Google Scholar} \quad
+  \href{https://www.linkedin.com/in/seonghyun-jin/?locale=ko_KR}{LinkedIn}
+}
+
+\sectiontitle{Research Interests}
+Reconstructing and generating the real 3D world; streaming 3D reconstruction; geometric perception; latent state modeling; generative world modeling.
+
+\sectiontitle{Education}
+\entry
+  {KAIST, Graduate School of AI}
+  {Mar. 2025 -- Present}
+  {Integrated M.S./Ph.D. student in Artificial Intelligence}
+  {Daejeon, Korea}
+\begin{itemize}
+  \item BISPL Lab, advised by \href{https://scholar.google.com/citations?user=HNMjoNEAAAAJ\&hl=en}{Prof. Jong Chul Ye}.
+\end{itemize}
+
+\vspace{4pt}
+\entry
+  {Seoul National University}
+  {Mar. 2020 -- Feb. 2025}
+  {B.S. in Computer Science; B.A. in Economics, College of Liberal Studies}
+  {Seoul, Korea}
+\begin{itemize}
+  \item GPA: 3.68 / 4.3. Graduated \textit{Cum Laude}.
+\end{itemize}
+
+\sectiontitle{Research Experience}
+\entry
+  {RUBIS Lab, Seoul National University}
+  {Sep. 2022 -- Jun. 2024}
+  {Undergraduate Research Intern}
+  {Seoul, Korea}
+\begin{itemize}
+  \item Conducted undergraduate research in computer science at \href{https://rubis.snu.ac.kr}{RUBIS Lab}.
+  \item Prepared experiments, code, and literature reviews for research projects.
+\end{itemize}
+
+\sectiontitle{Publications}
+\paper
+  {FILT3R: Latent State Adaptive Kalman Filter for Streaming 3D Reconstruction}
+  {\textbf{Seonghyun Jin}, Jong Chul Ye}
+  {arXiv:2603.18493, 2026}
+  {\href{https://arxiv.org/abs/2603.18493}{Paper} \quad
+   \href{https://github.com/jinotter3/FILT3R}{Code} \quad
+   \href{https://jinotter3.github.io/FILT3R/}{Project}}
+
+\paper
+  {CRePE}
+  {\textbf{Seonghyun Jin}, collaborators}
+  {Preprint in preparation, 2026}
+  {arXiv link to be added after upload.}
+
+\sectiontitle{Languages}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+  Korean & Native \\
+  English & Fluent; TEPS 538, TOEIC 980 \\
+\end{tabularx}
+
+\sectiontitle{Technical Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+  Programming & Python, PyTorch, Git, \LaTeX \\
+  Research & 3D reconstruction, computer vision, deep learning, experimental evaluation \\
+\end{tabularx}
+
+\end{document}
