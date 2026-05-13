@@ -5,181 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Seonghyun Jin is an AI researcher and integrated MS/PhD student at KAIST AI, working on reconstructing and generating the real 3D world."
+      content="Seonghyun Jin is an integrated MS/PhD student at KAIST AI, BISPL Lab, working on real-world 3D reconstruction and generation."
     >
     <meta name="author" content="Seonghyun Jin">
     <meta property="og:title" content="Seonghyun Jin">
-    <meta
-      property="og:description"
-      content="AI researcher at KAIST AI interested in reconstructing and generating the real 3D world."
-    >
+    <meta property="og:description" content="Integrated MS/PhD student at KAIST AI, BISPL Lab.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jinotter3.github.io/">
-    <meta property="og:image" content="assets/profile-placeholder.svg">
+    <meta property="og:image" content="assets/profile.jpg">
     <title>Seonghyun Jin</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="Seonghyun Jin home">Seonghyun Jin</a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+    <div class="page">
+      <aside class="sidebar" aria-label="Profile">
+        <img
+          class="portrait"
+          src="assets/profile.jpg"
+          alt="Seonghyun Jin"
+          onerror="this.onerror=null; this.src='assets/profile-placeholder.svg';"
+        >
+        <h1>Seonghyun Jin</h1>
+        <p class="position">Integrated MS/PhD Student</p>
+        <p>
+          <a href="https://gsai.kaist.ac.kr/">Graduate School of AI, KAIST</a><br>
+          <a href="https://bispl.weebly.com/">BISPL Lab</a>
+        </p>
+        <p class="email">
+          jinotter3 (at) kaist.ac.kr<br>
+          jinotter (at) gmail.com
+        </p>
+        <nav class="profile-links" aria-label="Profile links">
+          <a href="assets/Seonghyun_Jin_CV.pdf">CV</a>
+          <a href="https://scholar.google.com/citations?user=L13GpZIAAAAJ&hl=ko">Scholar</a>
+          <a href="https://github.com/jinotter3">GitHub</a>
+          <a href="https://www.linkedin.com/in/seonghyun-jin/?locale=ko_KR">LinkedIn</a>
+        </nav>
+      </aside>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="intro-title">
-        <div class="hero-photo">
-          <img
-            src="assets/profile.jpg"
-            alt="Seonghyun Jin"
-            onerror="this.onerror=null; this.src='assets/profile-placeholder.svg';"
-          >
-        </div>
-        <div class="hero-copy">
-          <p class="eyebrow">
-            KAIST AI - <a href="https://bispl.weebly.com/">BISPL Lab</a>
-          </p>
-          <h1 id="intro-title">Seonghyun Jin</h1>
-          <p class="lead">
-            I am a 2nd-year integrated MS/PhD student at KAIST AI in
-            <a class="inline-link" href="https://bispl.weebly.com/">BISPL Lab</a>,
-            advised by
-            <a class="inline-link" href="https://scholar.google.com/citations?user=HNMjoNEAAAAJ&hl=en">Prof. Jong Chul Ye</a>.
+      <main class="content">
+        <section aria-labelledby="about">
+          <h2 id="about">About Me</h2>
+          <p>
+            I am a 2nd-year integrated MS/PhD student at
+            <a href="https://gsai.kaist.ac.kr/">KAIST AI</a>, advised by
+            Prof. <a href="https://scholar.google.com/citations?user=HNMjoNEAAAAJ&hl=en">Jong Chul Ye</a>
+            at <a href="https://bispl.weebly.com/">BISPL Lab</a>. Before KAIST,
+            I earned a B.S. in Computer Science and a B.A. in Economics from
+            Seoul National University.
           </p>
           <p>
-            My research interest is reconstructing and generating the real 3D
-            world, with a focus on streaming 3D reconstruction, geometric
-            perception, and generative world modeling.
+            My research focuses on reconstructing and generating the real 3D
+            world. I am especially interested in streaming 3D reconstruction,
+            geometric perception, latent state modeling, and camera-controlled
+            video generation.
           </p>
-          <div class="link-row" aria-label="External links">
-            <a href="assets/Seonghyun_Jin_CV.pdf">CV</a>
-            <a href="https://github.com/jinotter3">GitHub</a>
-            <a href="https://scholar.google.com/citations?user=L13GpZIAAAAJ&hl=ko">Google Scholar</a>
-            <a href="https://www.linkedin.com/in/seonghyun-jin/?locale=ko_KR">LinkedIn</a>
-            <a href="https://bispl.weebly.com/">BISPL</a>
-            <a href="mailto:jinotter3@kaist.ac.kr">Email</a>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="research" class="section" aria-labelledby="research-title">
-        <div class="section-heading">
-          <p class="eyebrow">Research</p>
-          <h2 id="research-title">Real-World 3D Intelligence</h2>
-        </div>
-        <div class="research-grid">
-          <article class="research-item">
-            <h3>Streaming 3D Reconstruction</h3>
-            <p>
-              Building long-horizon 3D systems that maintain stable geometry and
-              camera motion from continuous visual streams.
-            </p>
-          </article>
-          <article class="research-item">
-            <h3>Latent State Modeling</h3>
-            <p>
-              Designing update rules and memory mechanisms that make recurrent
-              visual geometry models more reliable beyond their training horizon.
-            </p>
-          </article>
-          <article class="research-item">
-            <h3>Generative 3D Worlds</h3>
-            <p>
-              Exploring models that can synthesize, complete, and reason about
-              realistic 3D structure from visual observations.
-            </p>
-          </article>
-        </div>
-      </section>
+        <section aria-labelledby="news">
+          <h2 id="news">News</h2>
+          <ul class="news">
+            <li><span class="date">2026</span> CRePE preprint is in preparation.</li>
+            <li><span class="date">Mar. 2026</span> FILT3R preprint released on arXiv.</li>
+            <li><span class="date">Mar. 2025</span> Started integrated MS/PhD at KAIST AI.</li>
+          </ul>
+        </section>
 
-      <section id="publications" class="section" aria-labelledby="publications-title">
-        <div class="section-heading">
-          <p class="eyebrow">Selected Work</p>
-          <h2 id="publications-title">Publications</h2>
-        </div>
+        <section aria-labelledby="publications">
+          <h2 id="publications">Publications</h2>
 
-        <article class="publication featured">
-          <a class="publication-media" href="https://arxiv.org/abs/2603.18493" aria-label="FILT3R paper">
-            <img src="assets/filt3r-preview.gif" alt="FILT3R streaming 3D reconstruction preview">
-          </a>
-          <div class="publication-body">
-            <p class="venue">arXiv, 2026</p>
-            <h3>FILT3R: Latent State Adaptive Kalman Filter for Streaming 3D Reconstruction</h3>
-            <p class="authors">
-              <strong>Seonghyun Jin</strong>,
-              <a class="inline-link" href="https://scholar.google.com/citations?user=HNMjoNEAAAAJ&hl=en">Jong Chul Ye</a>
-            </p>
-            <p>
-              A training-free latent filtering layer for stabilizing long-horizon
-              streaming 3D reconstruction with adaptive process noise and a
-              Kalman-style token update.
-            </p>
-            <div class="publication-links">
-              <a href="https://arxiv.org/abs/2603.18493">Paper</a>
-              <a href="https://github.com/jinotter3/FILT3R">Code</a>
-              <a href="https://jinotter3.github.io/FILT3R/">Project</a>
+          <article class="paper">
+            <a class="paper-thumb" href="https://arxiv.org/abs/2603.18493" aria-label="FILT3R paper">
+              <img src="assets/filt3r-preview.gif" alt="FILT3R reconstruction preview">
+            </a>
+            <div class="paper-body">
+              <h3>
+                <a href="https://arxiv.org/abs/2603.18493">[P2] FILT3R: Latent State Adaptive Kalman Filter for Streaming 3D Reconstruction</a>
+              </h3>
+              <p class="authors"><strong>Seonghyun Jin</strong>, Jong Chul Ye</p>
+              <p class="venue">Under review. arXiv:2603.18493.</p>
+              <p class="paper-links">
+                <a href="https://arxiv.org/abs/2603.18493">PDF</a>
+                <a href="https://github.com/jinotter3/FILT3R">Code</a>
+                <a href="https://jinotter3.github.io/FILT3R/">Project</a>
+              </p>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <article class="publication">
-          <div class="publication-media placeholder" aria-hidden="true">
-            <span>CRePE</span>
-          </div>
-          <div class="publication-body">
-            <p class="venue">arXiv coming soon</p>
-            <h3>CRePE: Curved Ray Expectation Positional Encoding for Unified-Camera-Controlled Video Generation</h3>
-            <p class="authors">
-              <strong>Seonghyun Jin</strong>, Youngmin Kim, Sunwoo Park,
-              <a class="inline-link" href="https://scholar.google.com/citations?user=HNMjoNEAAAAJ&hl=en">Jong Chul Ye</a>
-            </p>
-            <p>
-              Details will be added after the arXiv upload.
-            </p>
-            <div class="publication-links">
-              <span class="muted-link" aria-disabled="true">Paper soon</span>
+          <article class="paper">
+            <div class="paper-thumb placeholder" aria-hidden="true">CRePE</div>
+            <div class="paper-body">
+              <h3>[P1] CRePE: Curved Ray Expectation Positional Encoding for Unified-Camera-Controlled Video Generation</h3>
+              <p class="authors"><strong>Seonghyun Jin</strong>, Youngmin Kim, Sunwoo Park, Jong Chul Ye</p>
+              <p class="venue">Under review. Preprint in preparation.</p>
+              <p class="paper-links"><span>PDF coming soon</span></p>
             </div>
-          </div>
-        </article>
-      </section>
+          </article>
+        </section>
 
-      <section class="section compact" aria-labelledby="news-title">
-        <div class="section-heading">
-          <p class="eyebrow">Updates</p>
-          <h2 id="news-title">News</h2>
-        </div>
-        <ol class="news-list">
-          <li>
-            <time datetime="2026-03">Mar 2026</time>
-            <span>FILT3R preprint released on arXiv.</span>
-          </li>
-          <li>
-            <time datetime="2026">2026</time>
-            <span>CRePE preprint in preparation.</span>
-          </li>
-        </ol>
-      </section>
-
-      <section id="contact" class="section contact" aria-labelledby="contact-title">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h2 id="contact-title">Get in touch</h2>
-        </div>
-        <p>
-          I am always interested in discussing 3D reconstruction, world modeling,
-          and reliable visual geometry systems. I am based in
-          <a class="inline-link" href="https://bispl.weebly.com/">BISPL Lab</a>
-          at KAIST AI.
-        </p>
-        <div class="email-list" aria-label="Email addresses">
-          <a class="primary-link" href="mailto:jinotter3@kaist.ac.kr">jinotter3@kaist.ac.kr</a>
-          <a class="secondary-link" href="mailto:jinotter@gmail.com">jinotter@gmail.com</a>
-        </div>
-      </section>
-    </main>
+        <section aria-labelledby="experience">
+          <h2 id="experience">Previous Research Experience</h2>
+          <p>
+            Undergraduate Research Intern at
+            <a href="https://rubis.snu.ac.kr">RUBIS Lab, Seoul National University</a>
+            from Sep. 2022 to Jun. 2024.
+          </p>
+        </section>
+      </main>
+    </div>
   </body>
 </html>

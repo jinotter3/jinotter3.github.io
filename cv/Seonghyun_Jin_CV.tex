@@ -1,6 +1,6 @@
 \documentclass[10pt,letterpaper]{article}
 
-\usepackage[margin=0.72in]{geometry}
+\usepackage[margin=0.58in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
@@ -9,133 +9,143 @@
 \usepackage{tabularx}
 \usepackage{hyperref}
 
-\definecolor{cvblue}{HTML}{1D4ED8}
-\definecolor{cvtext}{HTML}{111827}
-\definecolor{cvmuted}{HTML}{4B5563}
-\definecolor{cvline}{HTML}{D8E5F2}
+\definecolor{text}{HTML}{222222}
+\definecolor{muted}{HTML}{555555}
+\definecolor{rule}{HTML}{D9D9D9}
+\definecolor{link}{HTML}{2563EB}
 
 \hypersetup{
   colorlinks=true,
-  urlcolor=cvblue,
-  linkcolor=cvblue
+  urlcolor=link,
+  linkcolor=link
 }
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
-\setlist[itemize]{leftmargin=1.1em, topsep=2pt, itemsep=1pt, parsep=0pt}
+\setlength{\tabcolsep}{0pt}
+\setlist[itemize]{leftmargin=1.15em, topsep=2pt, itemsep=1pt, parsep=0pt}
 
-\newcommand{\name}[1]{%
-  {\LARGE\bfseries\color{cvtext} #1}\par\vspace{4pt}
-}
-
-\newcommand{\contact}[1]{%
-  {\small\color{cvmuted} #1}\par\vspace{10pt}
-}
-
-\newcommand{\sectiontitle}[1]{%
-  \vspace{11pt}
-  {\large\bfseries\color{cvblue} #1}\par
+\newcommand{\header}[3]{
+  {\LARGE\bfseries #1}\par
   \vspace{2pt}
-  {\color{cvline}\hrule height 0.8pt}
-  \vspace{6pt}
+  {\normalsize #2}\par
+  \vspace{2pt}
+  {\small\color{muted} #3}\par
+  \vspace{8pt}
 }
 
-\newcommand{\entry}[4]{%
+\newcommand{\sectiontitle}[1]{
+  \vspace{8pt}
+  {\large\bfseries #1}\par
+  \vspace{2pt}
+  {\color{rule}\hrule height 0.6pt}
+  \vspace{5pt}
+}
+
+\newcommand{\entry}[4]{
   \begin{tabularx}{\linewidth}{@{}X r@{}}
-    \textbf{#1} & {\small\color{cvmuted} #2} \\
-    {\color{cvmuted} #3} & {\small\color{cvmuted} #4} \\
+    \textbf{#1} & {\small #2} \\
+    {\color{muted} #3} & {\small\color{muted} #4} \\
   \end{tabularx}
 }
 
-\newcommand{\paper}[4]{%
-  \textbf{#1}\par
-  #2\par
-  {\small\color{cvmuted} #3}\par
-  {\small #4}\par
-  \vspace{6pt}
+\newcommand{\pub}[5]{
+  \begin{tabularx}{\linewidth}{@{}p{0.08\linewidth} X@{}}
+    \textbf{#1} &
+    \textbf{#2} \\
+    & #3 \\
+    & {\small\color{muted} #4} \\
+    & {\small #5}
+  \end{tabularx}
+  \vspace{5pt}
 }
 
 \begin{document}
+\color{text}
 
-\name{Seonghyun Jin}
-\contact{
-  KAIST AI, BISPL Lab \quad
-  \href{mailto:jinotter3@kaist.ac.kr}{jinotter3@kaist.ac.kr} \quad
-  \href{mailto:jinotter@gmail.com}{jinotter@gmail.com} \\
-  \href{https://jinotter3.github.io/}{jinotter3.github.io} \quad
-  \href{https://github.com/jinotter3}{github.com/jinotter3} \quad
-  \href{https://scholar.google.com/citations?user=L13GpZIAAAAJ\&hl=ko}{Google Scholar} \quad
-  \href{https://www.linkedin.com/in/seonghyun-jin/?locale=ko_KR}{LinkedIn}
-}
+\header
+  {Seonghyun Jin}
+  {Integrated M.S./Ph.D. Student, KAIST Graduate School of AI}
+  {\href{mailto:jinotter3@kaist.ac.kr}{jinotter3@kaist.ac.kr} \quad
+   \href{mailto:jinotter@gmail.com}{jinotter@gmail.com} \quad
+   \href{https://jinotter3.github.io/}{jinotter3.github.io} \quad
+   \href{https://github.com/jinotter3}{github.com/jinotter3} \quad
+   \href{https://scholar.google.com/citations?user=L13GpZIAAAAJ\&hl=ko}{Google Scholar}}
 
 \sectiontitle{Research Interests}
-Reconstructing and generating the real 3D world; streaming 3D reconstruction; geometric perception; latent state modeling; generative world modeling.
+Reconstructing and generating the real 3D world; streaming 3D reconstruction; geometric perception; latent state modeling; camera-controlled video generation.
 
 \sectiontitle{Education}
 \entry
-  {KAIST, Graduate School of AI}
+  {Korea Advanced Institute of Science and Technology (KAIST)}
   {Mar. 2025 -- Present}
-  {Integrated M.S./Ph.D. student in Artificial Intelligence}
-  {Daejeon, Korea}
+  {Integrated M.S./Ph.D. in Artificial Intelligence}
+  {Daejeon, Republic of Korea}
 \begin{itemize}
-  \item BISPL Lab, advised by \href{https://scholar.google.com/citations?user=HNMjoNEAAAAJ\&hl=en}{Prof. Jong Chul Ye}.
+  \item Advised by \href{https://scholar.google.com/citations?user=HNMjoNEAAAAJ\&hl=en}{Prof. Jong Chul Ye} at \href{https://bispl.weebly.com/}{BISPL}.
 \end{itemize}
 
-\vspace{4pt}
+\vspace{3pt}
 \entry
-  {Seoul National University}
+  {Seoul National University (SNU)}
   {Mar. 2020 -- Feb. 2025}
   {B.S. in Computer Science; B.A. in Economics, College of Liberal Studies}
-  {Seoul, Korea}
+  {Seoul, Republic of Korea}
 \begin{itemize}
-  \item GPA: 3.68 / 4.3. Graduated \textit{Cum Laude}.
+  \item GPA: 3.68/4.3, \textit{Cum Laude}.
 \end{itemize}
 
 \sectiontitle{Publications}
-\paper
+P: preprint, C: conference
+
+\vspace{3pt}
+\pub
+  {[P2]}
   {FILT3R: Latent State Adaptive Kalman Filter for Streaming 3D Reconstruction}
   {\textbf{Seonghyun Jin}, Jong Chul Ye}
   {Under review. arXiv:2603.18493.}
-  {\href{https://arxiv.org/abs/2603.18493}{Paper} \quad
+  {\href{https://arxiv.org/abs/2603.18493}{PDF} \quad
    \href{https://github.com/jinotter3/FILT3R}{Code} \quad
    \href{https://jinotter3.github.io/FILT3R/}{Project}}
 
-\paper
+\pub
+  {[P1]}
   {CRePE: Curved Ray Expectation Positional Encoding for Unified-Camera-Controlled Video Generation}
   {\textbf{Seonghyun Jin}, Youngmin Kim, Sunwoo Park, Jong Chul Ye}
-  {Under review. Preprint in preparation, 2026}
+  {Under review. Preprint in preparation, 2026.}
   {arXiv link to be added after upload.}
 
-\paper
+\pub
+  {[C1]}
   {AI-Based Mental Health Assessment for Adolescents Using Their Daily Digital Activities}
   {Do Hyung Kim, Joonsung Lee, Taehwi Lee, Soeun Baek, \textbf{Seonghyun Jin}, HaEun Yoo, Youngeun Cho, Seonghyeon Park, Kwangsu Cho, Chang-Gun Lee}
-  {IEEE DSAA, 2024}
-  {\href{https://ieeexplore.ieee.org/abstract/document/10722823}{Paper} \quad 6 citations}
+  {IEEE DSAA, 2024.}
+  {\href{https://ieeexplore.ieee.org/abstract/document/10722823}{PDF} \quad 6 citations}
 
 \sectiontitle{Previous Research Experience}
 \entry
   {RUBIS Lab, Seoul National University}
   {Sep. 2022 -- Jun. 2024}
   {Undergraduate Research Intern}
-  {Seoul, Korea}
+  {Seoul, Republic of Korea}
 \begin{itemize}
-  \item Researched digital phenotyping for adolescent mental health assessment from daily digital activity data at \href{https://rubis.snu.ac.kr}{RUBIS Lab}.
-  \item Performed feature engineering on a human-stroke/scribble dataset for downstream AI-based mental health prediction.
-  \item Built a React-based data collection application supporting a longitudinal user study with $\sim$300 adolescent participants over 2 months.
-  \item Contributed to publication at IEEE DSAA 2024 (co-author).
+  \item Researched digital phenotyping for adolescent mental health assessment from daily digital activity data.
+  \item Performed feature engineering on human-stroke/scribble data for downstream AI-based mental health prediction.
+  \item Built a React-based data collection application for a longitudinal user study with approximately 300 adolescent participants over 2 months.
+  \item Contributed to an IEEE DSAA 2024 publication as co-author.
 \end{itemize}
 
 \sectiontitle{Languages}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
-  Korean & Native \\
-  English & Fluent; TEPS 538, TOEIC 980 \\
+Korean & Native \\
+English & Fluent; TEPS 538, TOEIC 980 \\
 \end{tabularx}
 
 \sectiontitle{Technical Skills}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
-  Programming & Python, C, Dart, PyTorch, Git, \LaTeX \\
-  Research & 3D reconstruction, computer vision, deep learning, experimental evaluation \\
+Programming & Python, C, Dart, PyTorch, Git, \LaTeX \\
+Research & 3D reconstruction, computer vision, deep learning, experimental evaluation \\
 \end{tabularx}
 
 \end{document}
