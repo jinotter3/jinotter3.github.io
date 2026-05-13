@@ -1,0 +1,5 @@
+assets/*.aux
+assets/*.fdb_latexmk
+assets/*.fls
+assets/*.log
+assets/*.out
