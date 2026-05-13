@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1125" viewBox="0 0 900 1125" role="img" aria-labelledby="title desc">
+  <title id="title">Seonghyun Jin profile placeholder</title>
+  <desc id="desc">Initials placeholder for Seonghyun Jin.</desc>
+  <rect width="900" height="1125" fill="#f4f1ea"/>
+  <rect x="54" y="54" width="792" height="1017" rx="28" fill="#ffffff" stroke="#dedbd2" stroke-width="3"/>
+  <circle cx="450" cy="390" r="154" fill="#12312d"/>
+  <path d="M246 850c25-146 106-221 204-221s179 75 204 221" fill="#0f766e"/>
+  <text x="450" y="422" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="118" font-weight="800" fill="#ffffff">SJ</text>
+  <text x="450" y="940" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="44" font-weight="700" fill="#171717">Seonghyun Jin</text>
+</svg>
