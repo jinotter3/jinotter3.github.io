@@ -1,6 +1,6 @@
 \documentclass[10pt,letterpaper]{article}
 
-\usepackage[margin=0.58in]{geometry}
+\usepackage[margin=0.68in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
@@ -23,8 +23,8 @@
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
-\setlength{\tabcolsep}{0pt}
-\setlist[itemize]{leftmargin=1.15em, topsep=2pt, itemsep=1pt, parsep=0pt}
+\setlength{\tabcolsep}{3pt}
+\setlist[itemize]{leftmargin=1.25em, topsep=3pt, itemsep=2pt, parsep=0pt}
 
 \newcommand{\header}[3]{
   {\LARGE\bfseries #1}\par
@@ -32,15 +32,15 @@
   {\normalsize #2}\par
   \vspace{2pt}
   {\small\color{muted} #3}\par
-  \vspace{8pt}
+  \vspace{10pt}
 }
 
 \newcommand{\sectiontitle}[1]{
-  \vspace{8pt}
+  \vspace{12pt}
   {\large\bfseries #1}\par
   \vspace{2pt}
   {\color{rule}\hrule height 0.6pt}
-  \vspace{5pt}
+  \vspace{7pt}
 }
 
 \newcommand{\entry}[4]{
@@ -51,14 +51,18 @@
 }
 
 \newcommand{\pub}[5]{
-  \begin{tabularx}{\linewidth}{@{}p{0.08\linewidth} X@{}}
-    \textbf{#1} &
-    \textbf{#2} \\
-    & #3 \\
-    & {\small\color{muted} #4} \\
-    & {\small #5}
-  \end{tabularx}
-  \vspace{5pt}
+  \textbf{#1 #2}\par
+  #3\par
+  {\small\color{muted} #4}\par
+  {\small #5}\par
+  \vspace{8pt}
+}
+
+\newcommand{\skill}[2]{
+  \begin{tabularx}{\linewidth}{@{}p{0.29\linewidth} X@{}}
+    \textbf{#1} & #2
+  \end{tabularx}\par
+  \vspace{3pt}
 }
 
 \begin{document}
@@ -97,9 +101,9 @@ Reconstructing and generating the real 3D world; streaming 3D reconstruction; ge
 \end{itemize}
 
 \sectiontitle{Publications}
-P: preprint, C: conference
+{\small\color{muted} P: preprint, C: conference}
 
-\vspace{3pt}
+\vspace{6pt}
 \pub
   {[P2]}
   {CRePE: Curved Ray Expectation Positional Encoding for Unified-Camera-Controlled Video Generation}
@@ -112,10 +116,12 @@ P: preprint, C: conference
   {[P1]}
   {FILT3R: Latent State Adaptive Kalman Filter for Streaming 3D Reconstruction}
   {\textbf{Seonghyun Jin}, Jong Chul Ye}
-  {Under review. arXiv:2603.18493.}
-  {\href{https://arxiv.org/abs/2603.18493}{PDF} \quad
+  {Under review. arXiv:2603.18493, 2026.}
+  {\href{https://arxiv.org/abs/2603.18493}{arXiv} \quad
+   \href{https://arxiv.org/pdf/2603.18493}{PDF} \quad
    \href{https://github.com/jinotter3/FILT3R}{Code} \quad
-   \href{https://jinotter3.github.io/FILT3R/}{Project}}
+   \href{https://jinotter3.github.io/FILT3R/}{Project} \quad
+   1 citation}
 
 \pub
   {[C1]}
@@ -124,6 +130,7 @@ P: preprint, C: conference
   {IEEE DSAA, 2024.}
   {\href{https://ieeexplore.ieee.org/abstract/document/10722823}{PDF} \quad 6 citations}
 
+\newpage
 \sectiontitle{Academic Experience}
 \entry
   {RUBIS Lab, Seoul National University}
@@ -131,19 +138,21 @@ P: preprint, C: conference
   {Undergraduate Research Intern}
   {Seoul, Republic of Korea}
 \begin{itemize}
-  \item Researched digital phenotyping for adolescent mental health assessment from daily digital activity data.
-  \item Performed feature engineering on human-stroke/scribble data for downstream AI-based mental health prediction.
-  \item Built a React-based data collection application for a longitudinal user study with approximately 300 adolescent participants over 2 months.
-  \item Contributed to an IEEE DSAA 2024 publication as co-author.
+  \item Contributed to adolescent mental health digital phenotyping research through feature engineering and data collection support; co-authored an IEEE DSAA 2024 publication.
 \end{itemize}
 
 \sectiontitle{Languages}
 Korean (native); English (fluent, TEPS 538, TOEIC 980).
 
 \sectiontitle{Technical Skills}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-Programming & Python, C, Dart, PyTorch, Git, \LaTeX \\
-Research & 3D reconstruction, computer vision, deep learning, experimental evaluation \\
-\end{tabularx}
+\skill{Programming Languages}{Python, C}
+\skill{Deep Learning Frameworks}{PyTorch}
+\skill{Computer Vision}{Multi-view geometry, 3D reconstruction, camera pose and depth estimation}
+\skill{Training Experience}{Deep learning training, ablation studies, experiment management, evaluation pipelines}
+
+\sectiontitle{Reference}
+\textbf{Professor Jong Chul Ye}\par
+Graduate School of AI, KAIST\par
+\href{mailto:jong.ye@kaist.ac.kr}{jong.ye@kaist.ac.kr}
 
 \end{document}
