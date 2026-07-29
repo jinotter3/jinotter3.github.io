@@ -213,6 +213,10 @@ p {
   object-fit: cover;
 }
 
+.paper-thumb-contain img {
+  object-fit: contain;
+}
+
 .paper-body {
   min-width: 0;
 }
