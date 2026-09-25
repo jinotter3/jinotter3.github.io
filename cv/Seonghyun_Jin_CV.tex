@@ -1,159 +1,137 @@
+% Compile with XeLaTeX (see cv/README.md). Source Sans Pro comes from the TeX Live sourcesanspro package.
 \documentclass[10pt,letterpaper]{article}
 
-\usepackage[margin=0.68in]{geometry}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{lmodern}
+\usepackage[margin=0.55in,top=0.44in,bottom=0.35in]{geometry}
+\usepackage{fontspec}
 \usepackage{xcolor}
+\usepackage{titlesec}
 \usepackage{enumitem}
-\usepackage{tabularx}
 \usepackage{hyperref}
+\usepackage{microtype}
 
-\definecolor{text}{HTML}{222222}
-\definecolor{muted}{HTML}{555555}
-\definecolor{rule}{HTML}{D9D9D9}
-\definecolor{link}{HTML}{2563EB}
+% ---------- Fonts ----------
+\usepackage[default]{sourcesanspro}
 
+% ---------- Colors ----------
+\definecolor{navy}{HTML}{1F3A5F}
+\definecolor{gray}{HTML}{555555}
+\definecolor{rule}{HTML}{C9CFD8}
 \hypersetup{
   colorlinks=true,
-  urlcolor=link,
-  linkcolor=link
+  urlcolor=navy,
+  linkcolor=navy,
+  pdftitle={Seonghyun Jin - Curriculum Vitae},
+  pdfauthor={Seonghyun Jin}
 }
 
-\pagestyle{empty}
-\setlength{\parindent}{0pt}
+% ---------- Section headings ----------
+\titleformat{\section}
+  {\color{navy}\bfseries\small\addfontfeature{LetterSpace=12}}
+  {}{0em}{\MakeUppercase}
+  [\vspace{-0.55em}{\color{rule}\rule{\textwidth}{0.6pt}}]
+\titlespacing*{\section}{0pt}{0.6em}{0.4em}
+
+% ---------- Helpers ----------
+\newcommand{\sep}{\hspace{0.45em}{\color{rule}\textbar}\hspace{0.45em}}
+\newcommand{\entry}[4]{% title, right, subtitle, right2
+  \noindent\textbf{#1}\hfill{\small\color{gray}#2}\\
+  \noindent #3\hfill{\small\color{gray}#4}\par}
+\newcommand{\pub}[5]{% label, title, authors, venue, links
+  \noindent\textbf{#1 #2}\\
+  \noindent #3\\
+  \noindent {\color{navy}\textbf{#4\sep#5}}\par}
+\newcommand{\cites}[1]{\sep{\color{gray}\mdseries #1}}
+\newcommand{\skill}[2]{\noindent\hangindent=1.2em\hangafter=1 \textbf{#1}\quad #2\par}
+\setlist[itemize]{leftmargin=1.1em, nosep, topsep=0.15em, itemsep=0.1em, label={--}}
 \setlength{\parskip}{0pt}
-\setlength{\tabcolsep}{3pt}
-\setlist[itemize]{leftmargin=1.25em, topsep=3pt, itemsep=2pt, parsep=0pt}
-
-\newcommand{\header}[3]{
-  {\LARGE\bfseries #1}\par
-  \vspace{2pt}
-  {\normalsize #2}\par
-  \vspace{2pt}
-  {\small\color{muted} #3}\par
-  \vspace{10pt}
-}
-
-\newcommand{\sectiontitle}[1]{
-  \vspace{12pt}
-  {\large\bfseries #1}\par
-  \vspace{2pt}
-  {\color{rule}\hrule height 0.6pt}
-  \vspace{7pt}
-}
-
-\newcommand{\entry}[4]{
-  \begin{tabularx}{\linewidth}{@{}X r@{}}
-    \textbf{#1} & {\small #2} \\
-    {\color{muted} #3} & {\small\color{muted} #4} \\
-  \end{tabularx}
-}
-
-\newcommand{\pub}[5]{
-  \textbf{#1 #2}\par
-  #3\par
-  {\small\color{muted} #4}\par
-  {\small #5}\par
-  \vspace{8pt}
-}
-
-\newcommand{\skill}[2]{
-  \begin{tabularx}{\linewidth}{@{}p{0.29\linewidth} X@{}}
-    \textbf{#1} & #2
-  \end{tabularx}\par
-  \vspace{3pt}
-}
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{1em}
+\frenchspacing
+\pagestyle{empty}
 
 \begin{document}
-\color{text}
+\fontsize{10pt}{12pt}\selectfont
 
-\header
-  {Seonghyun Jin}
-  {Integrated M.S./Ph.D. Student, KAIST Graduate School of AI}
-  {\href{mailto:jinotter3@kaist.ac.kr}{jinotter3@kaist.ac.kr} \quad
-   \href{mailto:jinotter@gmail.com}{jinotter@gmail.com} \quad
-   \href{https://jinotter3.github.io/}{jinotter3.github.io} \quad
-   \href{https://github.com/jinotter3}{github.com/jinotter3} \quad
-   \href{https://scholar.google.com/citations?user=L13GpZIAAAAJ\&hl=ko}{Google Scholar}}
+% ================= HEADER =================
+{\fontsize{22}{24}\selectfont\bfseries\color{navy} Seonghyun Jin}\par
+\vspace{0.25em}
+\textbf{Integrated M.S./Ph.D. Student}\sep KAIST Graduate School of AI\par
+\vspace{0.15em}
+{\small
+\href{mailto:jinotter3@kaist.ac.kr}{jinotter3@kaist.ac.kr}\sep
+\href{mailto:jinotter@gmail.com}{jinotter@gmail.com}\sep
+\href{https://jinotter3.github.io/}{jinotter3.github.io}\sep
+\href{https://github.com/jinotter3}{github.com/jinotter3}\sep
+\href{https://scholar.google.com/citations?user=L13GpZIAAAAJ&hl=ko}{Google Scholar}}\par
 
-\sectiontitle{Research Interests}
-Reconstructing and generating the real 3D world; streaming 3D reconstruction; geometric perception; Geometric Positional encoding; camera-controlled video generation.
+% ================= RESEARCH INTERESTS =================
+\section{Research Interests}
+Reconstructing and generating the real 3D world; streaming 3D reconstruction; geometric perception; Geometric Positional encoding; camera-controlled video generation.\par
 
-\sectiontitle{Education}
-\entry
-  {Korea Advanced Institute of Science and Technology (KAIST)}
-  {Mar. 2025 -- Present}
-  {Integrated M.S./Ph.D. in Artificial Intelligence}
-  {Daejeon, Republic of Korea}
+% ================= EDUCATION =================
+\section{Education}
+\entry{Korea Advanced Institute of Science and Technology (KAIST)}{Mar. 2025 -- Present}
+      {Integrated M.S./Ph.D. in Artificial Intelligence}{Daejeon, Republic of Korea}
 \begin{itemize}
-  \item Advised by \href{https://scholar.google.com/citations?user=HNMjoNEAAAAJ\&hl=en}{Prof. Jong Chul Ye} at \href{https://bispl-website.github.io/}{BISPL}.
+  \item Advised by \href{https://scholar.google.com/citations?user=HNMjoNEAAAAJ&hl=en}{Prof. Jong Chul Ye} at \href{https://bispl-website.github.io/}{BISPL}.
+\end{itemize}
+\vspace{0.25em}
+\entry{Seoul National University (SNU)}{Mar. 2020 -- Feb. 2025}
+      {B.S. in Computer Science; B.A. in Economics, College of Liberal Studies}{Seoul, Republic of Korea}
+\begin{itemize}
+  \item GPA: 3.68/4.3, \emph{Cum Laude}.
 \end{itemize}
 
-\vspace{3pt}
-\entry
-  {Seoul National University (SNU)}
-  {Mar. 2020 -- Feb. 2025}
-  {B.S. in Computer Science; B.A. in Economics, College of Liberal Studies}
-  {Seoul, Republic of Korea}
-\begin{itemize}
-  \item GPA: 3.68/4.3, \textit{Cum Laude}.
-\end{itemize}
+% ================= PUBLICATIONS =================
+\section{Publications}
+{\small\color{gray} P: preprint, C: conference, W: workshop. Citations: \href{https://scholar.google.com/citations?user=L13GpZIAAAAJ&hl=en}{Google Scholar}, Sep. 11, 2026.}\par
+\vspace{0.35em}
+\pub{[C3]}
+    {CRePE: Curved Ray Expectation Positional Encoding for Unified-Camera-Controlled Video Generation}
+    {\textbf{Seonghyun Jin}, Youngmin Kim, Sunwoo Park, Jong Chul Ye}
+    {NeurIPS 2026. Also accepted to \href{https://eccv2026-3d-world-models.github.io/}{3D in the Era of World Models, ECCV 2026 Workshop}}
+    {\href{https://arxiv.org/abs/2605.12938}{arXiv}\sep
+     \href{https://arxiv.org/pdf/2605.12938}{PDF}\sep
+     \href{https://eccv2026-3d-world-models.github.io/}{Workshop}}
+\vspace{0.25em}
+\pub{[C2]}
+    {FILT3R: Latent State Adaptive Kalman Filter for Streaming 3D Reconstruction}
+    {\textbf{Seonghyun Jin}, Jong Chul Ye}
+    {ECCV 2026}
+    {\href{https://arxiv.org/abs/2603.18493}{arXiv}\sep
+     \href{https://arxiv.org/pdf/2603.18493}{PDF}\sep
+     \href{https://github.com/jinotter3/FILT3R}{Code}\sep
+     \href{https://jinotter3.github.io/FILT3R/}{Project}\cites{2 citations}}
+\vspace{0.25em}
+\pub{[C1]}
+    {AI-Based Mental Health Assessment for Adolescents Using Their Daily Digital Activities}
+    {Do Hyung Kim, Joonsung Lee, Taehwi Lee, Soeun Baek, \textbf{Seonghyun Jin}, HaEun Yoo, Youngeun Cho, Seonghyeon Park, Kwangsu Cho, Chang-Gun Lee}
+    {IEEE DSAA, 2024}
+    {\href{https://ieeexplore.ieee.org/abstract/document/10722823}{PDF}\cites{10 citations}}
 
-\sectiontitle{Publications}
-{\small\color{muted} P: preprint, C: conference, W: workshop}
-
-\vspace{6pt}
-\pub
-  {[W1]}
-  {CRePE: Curved Ray Expectation Positional Encoding for Unified-Camera-Controlled Video Generation}
-  {\textbf{Seonghyun Jin}, Youngmin Kim, Sunwoo Park, Jong Chul Ye}
-  {\href{https://eccv2026-3d-world-models.github.io/}{3D in the Era of World Models, ECCV 2026 Workshop}.}
-  {\href{https://arxiv.org/abs/2605.12938}{arXiv} \quad
-   \href{https://arxiv.org/pdf/2605.12938}{PDF} \quad
-   \href{https://eccv2026-3d-world-models.github.io/}{Workshop}}
-
-\pub
-  {[C2]}
-  {FILT3R: Latent State Adaptive Kalman Filter for Streaming 3D Reconstruction}
-  {\textbf{Seonghyun Jin}, Jong Chul Ye}
-  {ECCV 2026.}
-  {\href{https://arxiv.org/abs/2603.18493}{arXiv} \quad
-   \href{https://arxiv.org/pdf/2603.18493}{PDF} \quad
-   \href{https://github.com/jinotter3/FILT3R}{Code} \quad
-   \href{https://jinotter3.github.io/FILT3R/}{Project} \quad
-   1 citation}
-
-\pub
-  {[C1]}
-  {AI-Based Mental Health Assessment for Adolescents Using Their Daily Digital Activities}
-  {Do Hyung Kim, Joonsung Lee, Taehwi Lee, Soeun Baek, \textbf{Seonghyun Jin}, HaEun Yoo, Youngeun Cho, Seonghyeon Park, Kwangsu Cho, Chang-Gun Lee}
-  {IEEE DSAA, 2024.}
-  {\href{https://ieeexplore.ieee.org/abstract/document/10722823}{PDF} \quad 6 citations}
-
-\newpage
-\sectiontitle{Academic Experience}
-\entry
-  {RUBIS Lab, Seoul National University}
-  {Sep. 2022 -- Jun. 2024}
-  {Undergraduate Research Intern}
-  {Seoul, Republic of Korea}
+% ================= EXPERIENCE =================
+\section{Academic Experience}
+\entry{RUBIS Lab, Seoul National University}{Sep. 2022 -- Jun. 2024}
+      {Undergraduate Research Intern}{Seoul, Republic of Korea}
 \begin{itemize}
   \item Contributed to adolescent mental health digital phenotyping research through feature engineering and data collection support; co-authored an IEEE DSAA 2024 publication.
 \end{itemize}
 
-\sectiontitle{Languages}
-Korean (native); English (fluent, TEPS 538, TOEIC 980).
+% ================= LANGUAGES =================
+\section{Languages}
+Korean (native); English (fluent, TEPS 538, TOEIC 980).\par
 
-\sectiontitle{Technical Skills}
-\skill{Programming Languages}{Python, C}
+% ================= SKILLS =================
+\section{Technical Skills}
+\skill{Programming Languages}{Python, C, C++}
 \skill{Deep Learning Frameworks}{PyTorch}
 \skill{Computer Vision}{Multi-view geometry, 3D reconstruction, camera pose and depth estimation}
 \skill{Training Experience}{Deep learning training, ablation studies, experiment management, evaluation pipelines}
 
-\sectiontitle{Reference}
+% ================= REFERENCE =================
+\section{Reference}
 \textbf{Professor Jong Chul Ye}\par
 Graduate School of AI, KAIST\par
-\href{mailto:jong.ye@kaist.ac.kr}{jong.ye@kaist.ac.kr}
+\href{mailto:jong.ye@kaist.ac.kr}{jong.ye@kaist.ac.kr}\par
 
 \end{document}
