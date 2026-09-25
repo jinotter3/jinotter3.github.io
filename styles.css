@@ -221,6 +221,43 @@ p {
   min-width: 0;
 }
 
+/* Venue tag, colored by field. Use the class for the paper's field:
+   tag-vision   CVPR, ICCV, ECCV
+   tag-ml       NeurIPS, ICML, ICLR
+   tag-robotics CoRL, ICRA, IROS, RSS
+   tag-language ACL, EMNLP, NAACL, COLM
+   (no class)   preprints and anything else, in neutral slate */
+.venue-tag {
+  --tag: #64748b;
+  float: right;
+  margin: 1px 0 6px 14px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--tag);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.tag-vision {
+  --tag: #1d4ed8;
+}
+
+.tag-ml {
+  --tag: #7c3aed;
+}
+
+.tag-robotics {
+  --tag: #c2410c;
+}
+
+.tag-language {
+  --tag: #047857;
+}
+
 .pub-index {
   margin-right: 6px;
   color: var(--link-dark);
@@ -238,6 +275,7 @@ p {
 
 .paper-links {
   margin-top: 6px;
+  margin-bottom: 0;
   font-size: 14px;
 }
 
