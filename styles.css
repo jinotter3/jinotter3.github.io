@@ -176,6 +176,28 @@ p {
   font-size: 13px;
 }
 
+.section-link {
+  float: right;
+  margin-top: 5px;
+  color: var(--link-dark);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.section-link::after {
+  content: " \2192";
+}
+
+.back-link {
+  margin-bottom: 18px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+sup {
+  line-height: 0;
+}
+
 .paper {
   display: grid;
   grid-template-columns: 170px minmax(0, 1fr);
@@ -190,6 +212,12 @@ p {
 .paper:hover {
   border-color: var(--line);
   background: #fcfdff;
+}
+
+/* Full publication list: text-only entries, no thumbnail column */
+.paper-text {
+  grid-template-columns: minmax(0, 1fr);
+  margin-bottom: 8px;
 }
 
 .paper-thumb {

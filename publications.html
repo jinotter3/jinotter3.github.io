@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Seonghyun Jin is an integrated MS/PhD student at KAIST AI, BISPL Lab, working on real-world 3D reconstruction and generation."
+      content="Full list of publications by Seonghyun Jin, integrated MS/PhD student at KAIST AI, BISPL Lab."
     >
     <meta name="author" content="Seonghyun Jin">
-    <meta property="og:title" content="Seonghyun Jin">
-    <meta property="og:description" content="Integrated MS/PhD student at KAIST AI, BISPL Lab.">
+    <meta property="og:title" content="Publications | Seonghyun Jin">
+    <meta property="og:description" content="Full list of publications by Seonghyun Jin.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jinotter3.github.io/">
+    <meta property="og:url" content="https://jinotter3.github.io/publications.html">
     <meta property="og:image" content="assets/profile.jpg">
-    <title>Seonghyun Jin</title>
+    <title>Publications | Seonghyun Jin</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -46,47 +46,29 @@
       </aside>
 
       <main class="content">
-        <section aria-labelledby="about">
-          <h2 id="about">About Me</h2>
-          <p>
-            I am a 2nd-year integrated MS/PhD student at
-            <a href="https://gsai.kaist.ac.kr/">KAIST AI</a>, advised by
-            Prof. <a href="https://scholar.google.com/citations?user=HNMjoNEAAAAJ&hl=en">Jong Chul Ye</a>
-            at <a href="https://bispl-website.github.io/">BISPL Lab</a>. Before KAIST,
-            I earned a B.S. in Computer Science and a B.A. in Economics from
-            Seoul National University.
-          </p>
-          <p>
-            My research focuses on reconstructing and generating the real 3D
-            world. I am especially interested in streaming 3D reconstruction,
-            geometric perception, Geometric Positional encoding, and camera-controlled
-            video generation.
-          </p>
-          <ul class="interest-list" aria-label="Research interests">
-            <li>Streaming 3D Reconstruction</li>
-            <li>Camera-Controlled Video Generation</li>
-            <li>Geometric Positional Encoding</li>
-          </ul>
-        </section>
+        <p class="back-link"><a href="./">&larr; Home</a></p>
 
-        <section aria-labelledby="news">
-          <h2 id="news">News <a class="section-link" href="news.html">All news</a></h2>
-          <ul class="news">
-            <li><span class="date">Sep. 2026</span> DPP preprint released on <a href="https://arxiv.org/abs/2609.33172">arXiv</a>.</li>
-            <li><span class="date">Sep. 2026</span> CRePE accepted to NeurIPS 2026.</li>
-            <li><span class="date">Jun. 2026</span> FILT3R accepted to ECCV 2026.</li>
-            <li><span class="date">Mar. 2025</span> Started integrated MS/PhD at KAIST AI.</li>
-          </ul>
-        </section>
-
-        <section aria-labelledby="publications">
-          <h2 id="publications">Selected Publications <a class="section-link" href="publications.html">Full list</a></h2>
+        <section aria-labelledby="preprints">
+          <h2 id="preprints">Preprints</h2>
           <p class="publication-note">P: preprint, C: conference, W: workshop. <sup>*</sup>Equal contribution.</p>
 
-          <article class="paper">
-            <a class="paper-thumb" href="https://methoder00.github.io/DPP/" aria-label="DPP project page">
-              <img src="assets/dpp-thumb.jpg" alt="DPP real-robot result: the arm reaches a moving target">
-            </a>
+          <article class="paper paper-text">
+            <div class="paper-body">
+              <span class="venue-tag">arXiv 2026</span>
+              <h3>
+                <span class="pub-index">[P2]</span>
+                <a href="https://arxiv.org/abs/2609.34944">Adjoint Guidance Flow: Amortized Critic Guidance for VLA Policies</a>
+              </h3>
+              <p class="authors">Jeongsol Kim, Youngjun Jun, Kyumin Choi, Youngmin Kim, <strong>Seonghyun Jin</strong>, Sunwoo Park, Jangho Park, Kwanyoung Kim, Jong Chul Ye</p>
+              <p class="venue">arXiv preprint, 2026.</p>
+              <p class="paper-links">
+                <a href="https://arxiv.org/abs/2609.34944">arXiv</a>
+                <a href="https://arxiv.org/pdf/2609.34944">PDF</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="paper paper-text">
             <div class="paper-body">
               <span class="venue-tag">arXiv 2026</span>
               <h3>
@@ -102,11 +84,12 @@
               </p>
             </div>
           </article>
+        </section>
 
-          <article class="paper">
-            <a class="paper-thumb paper-thumb-contain" href="https://arxiv.org/abs/2605.12938" aria-label="CRePE paper">
-              <img src="assets/method_crepe_grey.png" alt="CRePE method overview">
-            </a>
+        <section aria-labelledby="conference">
+          <h2 id="conference">Conference Papers</h2>
+
+          <article class="paper paper-text">
             <div class="paper-body">
               <span class="venue-tag tag-ml">NeurIPS 2026</span>
               <h3>
@@ -123,10 +106,7 @@
             </div>
           </article>
 
-          <article class="paper">
-            <a class="paper-thumb" href="https://arxiv.org/abs/2603.18493" aria-label="FILT3R paper">
-              <img src="assets/filt3r-preview.gif" alt="FILT3R reconstruction preview">
-            </a>
+          <article class="paper paper-text">
             <div class="paper-body">
               <span class="venue-tag tag-vision">ECCV 2026</span>
               <h3>
@@ -143,15 +123,21 @@
               </p>
             </div>
           </article>
-        </section>
 
-        <section aria-labelledby="experience">
-          <h2 id="experience">Academic Experience</h2>
-          <p>
-            Undergraduate Research Intern at
-            <a href="https://rubis.snu.ac.kr">RUBIS Lab, Seoul National University</a>
-            from Sep. 2022 to Jun. 2024.
-          </p>
+          <article class="paper paper-text">
+            <div class="paper-body">
+              <span class="venue-tag">DSAA 2024</span>
+              <h3>
+                <span class="pub-index">[C1]</span>
+                <a href="https://ieeexplore.ieee.org/abstract/document/10722823">AI-Based Mental Health Assessment for Adolescents Using Their Daily Digital Activities</a>
+              </h3>
+              <p class="authors">Do Hyung Kim, Joonsung Lee, Taehwi Lee, Soeun Baek, <strong>Seonghyun Jin</strong>, HaEun Yoo, Youngeun Cho, Seonghyeon Park, Kwangsu Cho, Chang-Gun Lee</p>
+              <p class="venue">IEEE DSAA, 2024.</p>
+              <p class="paper-links">
+                <a href="https://ieeexplore.ieee.org/abstract/document/10722823">Paper</a>
+              </p>
+            </div>
+          </article>
         </section>
       </main>
     </div>
