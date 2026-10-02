@@ -1,13 +1,14 @@
 % Compile with XeLaTeX (see cv/README.md). Source Sans Pro comes from the TeX Live sourcesanspro package.
 \documentclass[10pt,letterpaper]{article}
 
-\usepackage[margin=0.55in,top=0.44in,bottom=0.35in]{geometry}
+\usepackage[margin=0.75in,top=0.65in,bottom=0.65in]{geometry}
 \usepackage{fontspec}
 \usepackage{xcolor}
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{microtype}
+\usepackage{needspace}
 
 % ---------- Fonts ----------
 \usepackage[default]{sourcesanspro}
@@ -29,7 +30,7 @@
   {\color{navy}\bfseries\small\addfontfeature{LetterSpace=12}}
   {}{0em}{\MakeUppercase}
   [\vspace{-0.55em}{\color{rule}\rule{\textwidth}{0.6pt}}]
-\titlespacing*{\section}{0pt}{0.6em}{0.4em}
+\titlespacing*{\section}{0pt}{1.3em}{0.6em}
 
 % ---------- Helpers ----------
 \newcommand{\sep}{\hspace{0.45em}{\color{rule}\textbar}\hspace{0.45em}}
@@ -41,8 +42,8 @@
   \noindent #3\\
   \noindent {\color{navy}\textbf{#4\sep#5}}\par}
 \newcommand{\cites}[1]{\sep{\color{gray}\mdseries #1}}
-\newcommand{\skill}[2]{\noindent\hangindent=1.2em\hangafter=1 \textbf{#1}\quad #2\par}
-\setlist[itemize]{leftmargin=1.1em, nosep, topsep=0.15em, itemsep=0.1em, label={--}}
+\newcommand{\skill}[2]{\noindent\hangindent=1.2em\hangafter=1 \textbf{#1}\quad #2\par\vspace{0.2em}}
+\setlist[itemize]{leftmargin=1.1em, nosep, topsep=0.3em, itemsep=0.15em, label={--}}
 \setlength{\parskip}{0pt}
 \setlength{\parindent}{0pt}
 \setlength{\emergencystretch}{1em}
@@ -50,7 +51,7 @@
 \pagestyle{empty}
 
 \begin{document}
-\fontsize{10pt}{12pt}\selectfont
+\fontsize{10pt}{13pt}\selectfont
 
 % ================= HEADER =================
 {\fontsize{22}{24}\selectfont\bfseries\color{navy} Seonghyun Jin}\par
@@ -75,7 +76,7 @@ Reconstructing and generating the real 3D world; streaming 3D reconstruction; ge
 \begin{itemize}
   \item Advised by \href{https://scholar.google.com/citations?user=HNMjoNEAAAAJ&hl=en}{Prof. Jong Chul Ye} at \href{https://bispl-website.github.io/}{BISPL}.
 \end{itemize}
-\vspace{0.25em}
+\vspace{0.6em}
 \entry{Seoul National University (SNU)}{Mar. 2020 -- Feb. 2025}
       {B.S. in Computer Science; B.A. in Economics, College of Liberal Studies}{Seoul, Republic of Korea}
 \begin{itemize}
@@ -85,14 +86,30 @@ Reconstructing and generating the real 3D world; streaming 3D reconstruction; ge
 % ================= PUBLICATIONS =================
 \section{Publications}
 {\small\color{gray} P: preprint, C: conference, W: workshop. $^*$Equal contribution. Citations: \href{https://scholar.google.com/citations?user=L13GpZIAAAAJ&hl=en}{Google Scholar}, Sep. 11, 2026.}\par
-\vspace{0.35em}
-\pub{[P2]}
+\vspace{0.5em}
+\pub{[P4]}
+    {DriftOPD: Sequence-Level Reverse-KL Distillation for One-Step VLA Policies}
+    {Youngjun Jun, Kyumin Choi, Youngmin Kim, \textbf{Seonghyun Jin}, Sunwoo Park, Jangho Park, Jong Chul Ye}
+    {arXiv preprint, 2026}
+    {\href{https://arxiv.org/abs/2610.00317}{arXiv}\sep
+     \href{https://arxiv.org/pdf/2610.00317}{PDF}\sep
+     \href{https://yj-jun.github.io/DriftOPD/}{Project}}
+\vspace{0.6em}
+\pub{[P3]}
     {Adjoint Guidance Flow: Amortized Critic Guidance for VLA Policies}
     {Jeongsol Kim, Youngjun Jun, Kyumin Choi, Youngmin Kim, \textbf{Seonghyun Jin}, Sunwoo Park, Jangho Park, Kwanyoung Kim, Jong Chul Ye}
     {arXiv preprint, 2026}
     {\href{https://arxiv.org/abs/2609.34944}{arXiv}\sep
      \href{https://arxiv.org/pdf/2609.34944}{PDF}}
-\vspace{0.25em}
+\vspace{0.6em}
+\pub{[P2]}
+    {Don't Throw Away the Tail: Action Upcycling for Policy Acceleration}
+    {Taesung Kwon$^*$, Jangho Park$^*$, Sunwoo Park, Youngmin Kim, \textbf{Seonghyun Jin}, Youngjun Jun, Kyumin Choi, Jong Chul Ye}
+    {arXiv preprint, 2026}
+    {\href{https://arxiv.org/abs/2609.34911}{arXiv}\sep
+     \href{https://arxiv.org/pdf/2609.34911}{PDF}\sep
+     \href{https://acupcycling.github.io/}{Project}}
+\vspace{0.6em}
 \pub{[P1]}
     {Dynamic Manipulation with World-Action Models via Counterfactual Planning}
     {Sunwoo Park$^*$, Wonbin Lee$^*$, \textbf{Seonghyun Jin}$^*$, Youngmin Kim$^*$, Jangho Park, Jong Chul Ye}
@@ -100,7 +117,7 @@ Reconstructing and generating the real 3D world; streaming 3D reconstruction; ge
     {\href{https://arxiv.org/abs/2609.33172}{arXiv}\sep
      \href{https://arxiv.org/pdf/2609.33172}{PDF}\sep
      \href{https://methoder00.github.io/DPP/}{Project}}
-\vspace{0.25em}
+\vspace{0.6em}
 \pub{[C3]}
     {CRePE: Curved Ray Expectation Positional Encoding for Unified-Camera-Controlled Video Generation}
     {\textbf{Seonghyun Jin}$^*$, Youngmin Kim$^*$, Sunwoo Park$^*$, Jong Chul Ye}
@@ -108,7 +125,7 @@ Reconstructing and generating the real 3D world; streaming 3D reconstruction; ge
     {\href{https://arxiv.org/abs/2605.12938}{arXiv}\sep
      \href{https://arxiv.org/pdf/2605.12938}{PDF}\sep
      \href{https://eccv2026-3d-world-models.github.io/}{Workshop}}
-\vspace{0.25em}
+\vspace{0.6em}
 \pub{[C2]}
     {FILT3R: Latent State Adaptive Kalman Filter for Streaming 3D Reconstruction}
     {\textbf{Seonghyun Jin}, Jong Chul Ye}
@@ -117,7 +134,7 @@ Reconstructing and generating the real 3D world; streaming 3D reconstruction; ge
      \href{https://arxiv.org/pdf/2603.18493}{PDF}\sep
      \href{https://github.com/jinotter3/FILT3R}{Code}\sep
      \href{https://jinotter3.github.io/FILT3R/}{Project}\cites{2 citations}}
-\vspace{0.25em}
+\vspace{0.6em}
 \pub{[C1]}
     {AI-Based Mental Health Assessment for Adolescents Using Their Daily Digital Activities}
     {Do Hyung Kim, Joonsung Lee, Taehwi Lee, Soeun Baek, \textbf{Seonghyun Jin}, HaEun Yoo, Youngeun Cho, Seonghyeon Park, Kwangsu Cho, Chang-Gun Lee}
@@ -125,6 +142,7 @@ Reconstructing and generating the real 3D world; streaming 3D reconstruction; ge
     {\href{https://ieeexplore.ieee.org/abstract/document/10722823}{PDF}\cites{10 citations}}
 
 % ================= EXPERIENCE =================
+\needspace{6\baselineskip}
 \section{Academic Experience}
 \entry{RUBIS Lab, Seoul National University}{Sep. 2022 -- Jun. 2024}
       {Undergraduate Research Intern}{Seoul, Republic of Korea}
