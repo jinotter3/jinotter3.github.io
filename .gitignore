@@ -3,3 +3,4 @@ assets/*.fdb_latexmk
 assets/*.fls
 assets/*.log
 assets/*.out
+.DS_Store
