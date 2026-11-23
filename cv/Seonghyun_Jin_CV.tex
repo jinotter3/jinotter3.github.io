@@ -38,6 +38,7 @@
   \noindent\textbf{#1}\hfill{\small\color{gray}#2}\\
   \noindent #3\hfill{\small\color{gray}#4}\par}
 \newcommand{\pub}[5]{% label, title, authors, venue, links
+  \needspace{4\baselineskip}%
   \noindent\textbf{#1 #2}\\
   \noindent #3\\
   \noindent {\color{navy}\textbf{#4\sep#5}}\par}
@@ -67,7 +68,7 @@
 
 % ================= RESEARCH INTERESTS =================
 \section{Research Interests}
-Reconstructing and generating the real 3D world; streaming 3D reconstruction; geometric perception; Geometric Positional encoding; camera-controlled video generation.\par
+Reconstructing and generating the real 3D/4D world; streaming 3D reconstruction; geometric perception; geometric positional encoding; camera-controlled video generation.\par
 
 % ================= EDUCATION =================
 \section{Education}
@@ -87,6 +88,20 @@ Reconstructing and generating the real 3D world; streaming 3D reconstruction; ge
 \section{Publications}
 {\small\color{gray} P: preprint, C: conference, W: workshop. $^*$Equal contribution. Citations: \href{https://scholar.google.com/citations?user=L13GpZIAAAAJ&hl=en}{Google Scholar}, Sep. 11, 2026.}\par
 \vspace{0.5em}
+\pub{[P7]}
+    {Mind the Band: The Hidden Frequency Variable in Geometric RoPE}
+    {\textbf{Seonghyun Jin}$^*$, Youngmin Kim$^*$, Jong Chul Ye}
+    {In submission, 2026}
+    {\href{https://bispl-wm.github.io/MindTheBand/paper.pdf}{PDF}\sep
+     \href{https://bispl-wm.github.io/MindTheBand/}{Project}}
+\vspace{0.6em}
+\pub{[P6]}
+    {GALILEO: Geometric RoPE with Galilean Key Transport for Dynamic Scenes}
+    {Youngmin Kim$^*$, \textbf{Seonghyun Jin}$^*$, Jong Chul Ye}
+    {In submission, 2026}
+    {\href{https://bispl-wm.github.io/GALILEO/assets/galileo_paper.pdf}{PDF}\sep
+     \href{https://bispl-wm.github.io/GALILEO/}{Project}}
+\vspace{0.6em}
 \pub{[P5]}
     {FastOPD: On-Policy Distillation for Lightweight VLA Deployment}
     {Yoojin Oh$^*$, Jeongsol Kim$^*$, Yeonwoo Seo, Jangho Park, \textbf{Seonghyun Jin}, Sunwoo Park, Youngmin Kim, Youngjun Jun, Kyumin Choi, Jong Chul Ye}
@@ -153,6 +168,13 @@ Reconstructing and generating the real 3D world; streaming 3D reconstruction; ge
 % ================= EXPERIENCE =================
 \needspace{6\baselineskip}
 \section{Academic Experience}
+\entry{BISPL, KAIST}{Mar. 2025 -- Present}
+      {Graduate Researcher}{Daejeon, Republic of Korea}
+\begin{itemize}
+  \item First-author research on multi-lens camera-controlled video generation (CRePE), streaming 3D reconstruction (FILT3R), geometric RoPE frequency-band analysis (Mind the Band), and dynamic 4D attention (GALILEO).
+  \item Collaborative research on world-action models for dynamic manipulation and efficient VLA policies.
+\end{itemize}
+\vspace{0.6em}
 \entry{RUBIS Lab, Seoul National University}{Sep. 2022 -- Jun. 2024}
       {Undergraduate Research Intern}{Seoul, Republic of Korea}
 \begin{itemize}
@@ -167,8 +189,8 @@ Korean (native); English (fluent, TEPS 538, TOEIC 980).\par
 \section{Technical Skills}
 \skill{Programming Languages}{Python, C, C++}
 \skill{Deep Learning Frameworks}{PyTorch}
-\skill{Computer Vision}{Multi-view geometry, 3D reconstruction, camera pose and depth estimation}
-\skill{Training Experience}{Deep learning training, ablation studies, experiment management, evaluation pipelines}
+\skill{Computer Vision \& Generative Models}{Multi-view geometry, streaming 3D reconstruction, dynamic 4D scene modeling, geometric positional encoding, camera-controlled video diffusion}
+\skill{Training Experience}{Deep learning training, ablation studies, experiment management, evaluation and robot data pipelines}
 
 % ================= REFERENCE =================
 \section{Reference}
